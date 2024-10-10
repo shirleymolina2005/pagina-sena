@@ -1,0 +1,230 @@
+:root{
+    --primario: #39A900; /*verde corporativo*/
+
+    /*colores secundarios*/
+    --secundario: #007832; /*verde obscuro*/
+
+    --azulsena: #00304d;
+    --azulcsena: #50e5f9;
+    --amarillosena: #fcd300;
+    --moradosena: #71277a;
+
+    /*colores neutros*/
+    --blanco: #ffffff; 
+    --obscuro: #000000; 
+    --gris: #F6F6F6;
+    --fuente-principal: 3.8rem;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    font-family: 'Work Sans';
+    background-color: royalblue;
+
+
+    /*degradar*/
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);
+    
+
+}
+
+h1 span{
+    font-size: 2rem;
+} 
+
+h1 {
+    text-align: center;
+    color: violet;
+    font-size: var(--fuente-principal); /* 10px = 1rem*/
+}
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: violet;
+}
+h3 {
+    color: rgb(251, 5, 239);
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+p{
+    color: white;
+}
+
+/*uso class en el html para el estilo*/
+.titulo {
+    text-align: center;
+    color: var(--primario);
+    font-size: var(--fuente-principal);  
+    font-family: 'krub', Arial, Helvetica, sans-serif;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+h1.titulo span {
+    font-size: 2rem;
+    color: var(--secundario);
+}
+
+.navegacion-principal{
+    background-color: var(--obscuro);
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: space-between;
+}
+
+.navegacion-principal a{
+    /*background-color: var(--primario);*/
+    color: var(--blanco);
+    display: inline;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--azulcsena);
+    color: var(--blanco);
+}
+.contenedor{
+    width: 120rem; 
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    /* simplicar margin: 0 auto;*/
+}
+.navegacion-bg{
+    background-color: var(--obscuro)
+}
+/* uso id en el Html para el siguiente estilo
+#titulo {
+    text-align: center;
+    color: green;
+    font-size: 3.8rem;   
+}*/
+
+.fondo{
+    background-image: url(../img/codigo.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    position: relative;
+    top: 0;
+}
+.fondo2{
+    background-image: url(../img/familia.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+    width: 200%;
+    position: ;
+    top: auto;
+    left: 100%;
+}
+
+.contenido-fondo{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 62.5%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-fondo h2, .contenido-fondo p{
+    color: var(--blanco);
+}
+ 
+
+
+/**/
+.sombra{
+    /*-webkit-box-shadow: 15px 10px 50px 0px rgba(0,0,0,0.6);*/
+-moz-box-shadow: 15px 10px 50px 0px rgba(0,0,0,0.6);
+box-shadow: 15px 10px 50px 0px rgba(0,0,0,0.6);
+background-color: var(--obscuro);
+padding: 2rem;
+margin-top: 2rem;
+border-radius: 1rem;
+}
+.servicios{
+    display: grid;
+    
+   /* grid-template-columns:  1fr 1fr 1fr;*/
+    /*grid-template-columns: 33.3% 33.3% 33.3%;*/
+    /*grid: 200px 600px / 300px 300px;*/
+
+    /*columnas y filas */
+    /*grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px;*/
+
+
+
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.servicio p{
+    line-height: 1.5;
+    text-align: justify;
+    padding: 2rem;
+}
+.iconos{
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--azulcsena);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo{
+    height: 8rem;
+    width: 8rem;
+}
+
+@media(min-width: 480px){}
+
+@media(min-width: 768px){
+    
+    .navegacion-principal{
+        flex-direction: row;   
+    }
+    .boton{
+        width: auto;
+    }
+    .servicios{
+       
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+
+    }
+}
+
+@media(min-width: 1020){}
+
+@media(min-width: 1120){}
+
+
+
